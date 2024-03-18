@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>System.IO.Independent</RootNamespace>
+        <TargetFramework>net6.0</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Independent.Path</PackageId>
+        <Description>Extends built-in `System.IO.Path` class to specify a platform for independent its members, such as `Combine()`, `IsPathRooted()` and others.</Description>
+        <Authors>Sergey Petrov</Authors>
+        <Copyright>Copyright (c) Sergey Petrov 2024</Copyright>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>path;independent;cross-platform;windows;unix;system;io;combine;join;separator;file;directory;dir;volume</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/nomba/path-independent</RepositoryUrl>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <EmbeddedResource Remove="Source\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Source\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
